@@ -1,0 +1,40 @@
+openapi: 3.0.3
+info:
+  title: vue-rest-trial
+  description: |-
+    これはRESTAPIリファレンス
+  version: 1.0.11
+externalDocs:
+  description: GitHub
+  url: https://github.com/sh1Nome/vue-rest-trial
+tags:
+  - name: hoge
+    description: hogehoge
+  - name: fuga
+    description: fugafuga
+  - name: piyo
+    description: piyopiyo
+paths:
+  /hoge:
+    get:
+      tags:
+       - hoge
+      summary: これはhogeの概要
+      description: |-
+        これはhogeの説明
+      responses:
+        200:
+          description: |-
+            これはhogeのレスポンスの説明
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResponseTemplete'
+components:
+  schemas:
+    ResponseTemplete:
+      type: object
+      properties:
+        name:
+          type: string
+          description: 画面名
