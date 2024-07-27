@@ -2,6 +2,7 @@
     "modelPackage": "com.example.demo.api.model",
     "apiPackage": "com.example.demo.api.controller",
     "dateLibrary": "java11",
+    "jakarta": true,
     "interfaceOnly": true,
     "defaultInterfaces": false,
     "library": "spring-boot3"
