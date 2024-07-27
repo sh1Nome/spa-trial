@@ -1,10 +1,20 @@
 version: '3.9'
 services:
   jdk:
-    build: .
+    build:
+      context: .
+      dockerfile: 'JdkDockerfile'
     container_name: 'jdk'
     init: true
     volumes:
-      - './work:/home/work'
+      - './mounted-jdk:/home/work'
     ports:
       - '8080:8080'
+  node:
+    build:
+      context: .
+      dockerfile: 'NodeDockerfile'
+    container_name: 'node'
+    init: true
+    volumes:
+      - './mounted-node:/home/work'
