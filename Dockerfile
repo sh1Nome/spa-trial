@@ -6,6 +6,10 @@ RUN groupadd work \
 
 USER work
 
-WORKDIR /home/work
+# WORKDIR /home/work
 
-ENTRYPOINT [ "tail", "-f", "/dev/null" ]
+# ENTRYPOINT [ "tail", "-f", "/dev/null" ]
+
+WORKDIR /home/work/demo
+
+ENTRYPOINT ["./gradlew", "bootRun"]
