@@ -29,12 +29,72 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ResponseTemplete'
+                $ref: '#/components/schemas/ResponseHogeFuga'
+  /fuga:
+    get:
+      tags:
+       - fuga
+      summary: これはfugaの概要
+      description: |-
+        これはfugaの説明
+      responses:
+        200:
+          description: |-
+            これはfugaのレスポンスの説明
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResponseHogeFuga'
+  /piyo:
+    post:
+      tags:
+       - piyo
+      summary: これはpiyoの概要
+      description: |-
+        これはpiyoの説明
+      requestBody:
+        description: |-
+          これはpiyoのリクエストボディの説明
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RequestPiyo'
+        required: true
+      responses:
+        200:
+          description: |-
+            これはpiyoのレスポンスの説明
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResponsePiyo'
 components:
   schemas:
-    ResponseTemplete:
+    RequestPiyo:
       type: object
+      required:
+        - greeting
+      properties:
+        greeting:
+          type: string
+          description: あいさつ
+    ResponseHogeFuga:
+      type: object
+      required:
+        - name
       properties:
         name:
           type: string
           description: 画面名
+    ResponsePiyo:
+      type: object
+      required:
+        - name
+        - greeting
+      properties:
+        name:
+          type: string
+          description: 画面名
+        greeting:
+          type: string
+          description: あいさつ
