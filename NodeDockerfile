@@ -1,11 +1,12 @@
 FROM node:22-slim
 
-RUN groupadd work \
-    && useradd -g work work \
-    && echo 'work:password' | chpasswd
+ENV NODE_ENV=development
+ENV NPM_CONFIG_LOGLEVEL=info
 
-USER work
+RUN npm install -g npm@10.8.2
 
-WORKDIR /home/work
+USER node
+
+WORKDIR /home/node/vue-project
 
 ENTRYPOINT [ "tail", "-f", "/dev/null" ]
