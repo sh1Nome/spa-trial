@@ -1,6 +1,7 @@
 package com.example.demo.api.controller.impl;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.api.controller.PiyoApi;
@@ -10,6 +11,7 @@ import com.example.demo.api.model.ResponsePiyo;
 import jakarta.validation.Valid;
 
 @RestController
+@RequestMapping("/api")
 public class PiyoApiController implements PiyoApi {
 
     @Override
