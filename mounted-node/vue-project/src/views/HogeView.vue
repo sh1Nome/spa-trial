@@ -1,19 +1,18 @@
 <script>
-import axios from 'axios'
+import axios from 'axios';
 export default {
     data() {
         return {
-            title: 'hoge画面'
+            record: {
+                name: ''
+            }
         }
     },
-    methods: {
-        test() {
-            axios.get('http://localhost:8080/demo/hoge').then(response => console.log(response));
-        }
+    mounted() {
+        axios.get('http://localhost:8080/demo/api/hoge').then(response => this.record = response.data);
     }
 }
 </script>
 <template>
-    <div>{{ title }}</div>
-    <button @click="test">test</button>
+    <div>{{ record.name }}</div>
 </template>

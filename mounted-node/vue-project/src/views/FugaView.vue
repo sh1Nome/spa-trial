@@ -1,3 +1,18 @@
+<script>
+import axios from 'axios';
+export default {
+    data() {
+        return {
+            record: {
+                name: ''
+            }
+        }
+    },
+    mounted() {
+        axios.get('http://localhost:8080/demo/api/fuga').then(response => this.record = response.data);
+    }
+}
+</script>
 <template>
-    <div>fuga画面</div>
+    <div>{{ record.name }}</div>
 </template>
