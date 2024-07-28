@@ -1,3 +1,3 @@
 <template>
-    <div>Fuga画面</div>
+    <div>fuga画面</div>
 </template>
