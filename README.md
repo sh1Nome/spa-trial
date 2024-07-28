@@ -6,9 +6,8 @@
 * hoge画面、fuga画面、piyo画面（Vue Router）
 * 各画面を遷移するヘッダー
 * 画面が表示されたタイミングでRESTAPIのエンドポイントにリクエストを投げ、レスポンスを画面に表示する
-* エンドポイント`piyo`からのレスポンス`greeting`は1度取得したらすべての画面で表示する（Vuex）
-* すべての画面にある削除ボタンを押下すると`greeting`が消える（Vuex）
-* 簡単なデザイン（Tailwind CSS）
+* エンドポイント`piyo`からのレスポンス`greeting`は1度取得したらすべての画面で表示する（Pinia）
+* すべての画面にある削除ボタンを押下すると`greeting`が消える（Pinia）
 
 ## バックエンド（Spring Boot）
 * RESTAPIのエンドポイントを3つ用意する

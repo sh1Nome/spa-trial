@@ -1,19 +1,25 @@
-<script setup>
+<script>
 import { RouterLink, RouterView } from 'vue-router'
+import StyledRouterLink from './components/StyledRouterLink.vue'
+
+export default {
+  components: {
+    StyledRouterLink
+  }
+}
 </script>
 
 <template>
   <header>
-
-    <div class="wrapper">
-
-      <nav>
-        <RouterLink to="/hoge">hoge画面</RouterLink>
-        <RouterLink to="/fuga">fuga画面</RouterLink>
-        <RouterLink to="/piyo">piyo画面</RouterLink>
-      </nav>
-    </div>
+    <nav>
+      <ul>
+        <StyledRouterLink path="/hoge" name="hoge"></StyledRouterLink>
+        <StyledRouterLink path="/fuga" name="fuga"></StyledRouterLink>
+        <StyledRouterLink path="/piyo" name="piyo"></StyledRouterLink>
+      </ul>
+    </nav>
   </header>
-
-  <RouterView />
+  <main>
+    <RouterView />
+  </main>
 </template>
