@@ -1,0 +1,24 @@
+{
+    "name": "Vue Dev Templete",
+    "dockerComposeFile": "../docker-compose.yml",
+    "service": "node",
+    "workspaceFolder": "/home/node/vue-project",
+    "shutdownAction": "none",
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "terminal.integrated.defaultProfile.linux": "bash",
+                "terminal.integrated.mouseWheelScrollSensitivity": 0.3,
+                "editor.renderWhitespace": "all",
+                "emmet.variables": {
+                    "lang": "ja"
+                },
+                "redhat.telemetry.enabled": false,
+                "editor.formatOnSave": true
+            },
+            "extensions": [
+                "Vue.volar"
+            ]
+        }
+    }
+}
