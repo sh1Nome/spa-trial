@@ -1,5 +1,7 @@
 <script>
 import axios from 'axios';
+import { mapWritableState } from 'pinia';
+import { useStore } from '../stores/store';
 export default {
     data() {
         return {
@@ -8,6 +10,9 @@ export default {
             }
         }
     },
+    computed: {
+        ...mapWritableState(useStore, ['greeting'])
+    },
     mounted() {
         axios.get('http://localhost:8080/demo/api/fuga').then(response => this.record = response.data);
     }
@@ -15,4 +20,5 @@ export default {
 </script>
 <template>
     <div>{{ record.name }}</div>
+    <div>{{ greeting }}</div>
 </template>
